@@ -154,6 +154,10 @@ extension IAPHelper: SKPaymentTransactionObserver {
     }
 }
 
-public struct Products {
-    public static let store = IAPHelper(productIDs: )
+public struct TeamSetProducts {
+    public static let product = "com.simeone.StretchTimer.basicCoachingMonthly"
+    
+    private static let productIdentifiers: Set<ProductIdentifier> = [TeamSetProducts.product]
+    
+    public static let store = IAPHelper(productIDs: TeamSetProducts.productIdentifiers)
 }
