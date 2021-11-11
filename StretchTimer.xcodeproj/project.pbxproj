@@ -136,10 +136,10 @@
 				CA446EF325F87A9800474AB6 /* InitialViewController.swift */,
 				CA446EF725F9B89E00474AB6 /* OnboardingViewController.swift */,
 				CA6CC3C62699334E003A9758 /* CoreDataManager.swift */,
+				CA9463D2271F531C00D9FFFD /* IAPHelper.swift */,
 				CA588B5525F6ED5E0016227E /* Assets.xcassets */,
 				CA588B5725F6ED5E0016227E /* LaunchScreen.storyboard */,
 				CA588B5A25F6ED5E0016227E /* Info.plist */,
-				CA9463D2271F531C00D9FFFD /* IAPHelper.swift */,
 			);
 			path = StretchTimer;
 			sourceTree = "<group>";

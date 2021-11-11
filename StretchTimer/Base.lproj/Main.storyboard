@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eId-2a-ePe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eId-2a-ePe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -722,13 +722,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Coach ID (ask your coach...)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOQ-c7-eA0">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Coach ID (ask your coach...)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOQ-c7-eA0">
                                 <rect key="frame" x="40" y="641.5" width="334" height="34"/>
                                 <color key="backgroundColor" red="0.60587535189999997" green="0.80412203680000005" blue="0.51907614290000004" alpha="0.65324765159999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkB-Pa-KAN">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkB-Pa-KAN">
                                 <rect key="frame" x="166" y="705.5" width="82" height="80"/>
                                 <color key="tintColor" red="0.43019490256576592" green="0.41631764764428963" blue="0.44407215748724227" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="circle.fill" catalog="system">
@@ -750,7 +750,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-Tw-6ak">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-Tw-6ak">
                                 <rect key="frame" x="40" y="592.5" width="334" height="34"/>
                                 <color key="backgroundColor" red="0.60587535189999997" green="0.80412203680000005" blue="0.51907614290000004" alpha="0.65324765159999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
@@ -767,8 +767,8 @@
                                 <color key="tintColor" red="0.60587535189999997" green="0.80412203680000005" blue="0.51907614290000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="250"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2B-Kw-S6M">
-                                <rect key="frame" x="157.5" y="827" width="99" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2B-Kw-S6M">
+                                <rect key="frame" x="157.5" y="800.5" width="99" height="61.5"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <state key="normal" title="I'm a coach!"/>
                                 <connections>
@@ -785,6 +785,7 @@
                             <constraint firstItem="KOQ-c7-eA0" firstAttribute="top" secondItem="NhR-Tw-6ak" secondAttribute="bottom" constant="15" id="4ZD-u1-RwT"/>
                             <constraint firstItem="YkB-Pa-KAN" firstAttribute="top" secondItem="KOQ-c7-eA0" secondAttribute="bottom" constant="30" id="6wk-in-ERW"/>
                             <constraint firstItem="8Kn-Oz-lkR" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="B6j-1E-v47"/>
+                            <constraint firstItem="s2B-Kw-S6M" firstAttribute="top" secondItem="YkB-Pa-KAN" secondAttribute="bottom" constant="15" id="Dfs-jv-3fu"/>
                             <constraint firstItem="YkB-Pa-KAN" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="Fzy-eL-YNn"/>
                             <constraint firstItem="NhR-Tw-6ak" firstAttribute="top" secondItem="qQ0-PC-EGb" secondAttribute="bottom" constant="30" id="GYP-kZ-SmE"/>
                             <constraint firstItem="KOQ-c7-eA0" firstAttribute="leading" secondItem="n1d-QW-cKd" secondAttribute="leading" constant="40" id="N1S-Lk-KYN"/>
@@ -798,7 +799,7 @@
                             <constraint firstItem="ctm-ed-BCL" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="knx-5B-Edh"/>
                             <constraint firstItem="s2B-Kw-S6M" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="mR3-og-wgQ"/>
                             <constraint firstItem="ctm-ed-BCL" firstAttribute="centerY" secondItem="YkB-Pa-KAN" secondAttribute="centerY" id="rhK-gZ-bcn"/>
-                            <constraint firstItem="Bth-Ex-00u" firstAttribute="top" secondItem="n1d-QW-cKd" secondAttribute="top" constant="50" id="uUo-If-AzS"/>
+                            <constraint firstItem="Bth-Ex-00u" firstAttribute="top" secondItem="n1d-QW-cKd" secondAttribute="top" priority="250" constant="50" id="uUo-If-AzS"/>
                             <constraint firstItem="n1d-QW-cKd" firstAttribute="trailing" secondItem="NhR-Tw-6ak" secondAttribute="trailing" constant="40" id="wYF-tE-36L"/>
                         </constraints>
                     </view>

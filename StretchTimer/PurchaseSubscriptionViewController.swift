@@ -34,6 +34,8 @@ class PurchaseSubscriptionViewController: UIViewController, UITextFieldDelegate 
         
         //Add notification observer for completing purchases
         NotificationCenter.default.addObserver(self, selector: #selector(PurchaseSubscriptionViewController.handlePurchaseNotification(_:)), name: .IAPHelperPurchaseNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(PurchaseSubscriptionViewController.handlePurchaseDidFailNotification(_:)), name: NSNotification.Name(rawValue: "IAPHelperPurchaseDidFailNotification"), object: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -56,7 +58,17 @@ class PurchaseSubscriptionViewController: UIViewController, UITextFieldDelegate 
                 self.products = products!
                 let firstProduct = products![0]
                 print("First product in returned list: \(firstProduct)")
-                TeamSetProducts.store.buyProduct(firstProduct)
+                if TeamSetProducts.store.isProductPurchased(firstProduct.productIdentifier) {
+                    //The product has already been purchased. Notify user and prompt them to login.
+                    DispatchQueue.main.async {
+                        let ac = UIAlertController(title: "You've already purchased this!", message: "Paying me twice would be appreciated, but I think you just want to log in...", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+                        self.present(ac, animated: true)
+                    }
+                } else {
+                    //Proceed with buying the product
+                    TeamSetProducts.store.buyProduct(firstProduct)
+                }
                 //MARK: Note
                 //After the above line is run, start an activity indicator with a timer that will send the user a timeout warning after a certain time if the success notification doesnt' come back.
             } else {
@@ -68,11 +80,29 @@ class PurchaseSubscriptionViewController: UIViewController, UITextFieldDelegate 
     
     @objc func handlePurchaseNotification(_ notification: Notification) {
         //This stuff might not be useful to me. Just use this to continue account creation.
-        print("The purchase thingy worked")
+       /* print("The purchase thingy worked")
         guard let productID = notification.object as? String, let index = products.firstIndex(where: { product -> Bool in
             product.productIdentifier == productID
         })
         else { return }
+        print("ProductID: \(productID)") */
+        createAccount()
+
+    }
+    
+    //Handle a failed purchase
+    @objc func handlePurchaseDidFailNotification(_ notification: Notification) {
+        guard let errorDescription = notification.object as? String else { return }
+        let ac = UIAlertController(title: "Whoops!", message: "Something went wrong: \(errorDescription)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        DispatchQueue.main.async {
+            self.present(ac, animated: true)
+        }
+    }
+    
+    //Called after purchase completed. Should talk to server and actually create the account.
+    private func createAccount() {
+        
     }
     
     
