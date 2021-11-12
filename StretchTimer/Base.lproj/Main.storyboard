@@ -587,34 +587,132 @@
             </objects>
             <point key="canvasLocation" x="567" y="2190"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Athletes-->
         <scene sceneID="UP0-z2-705">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rZr-m8-8WN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Trb-8u-Y3U" customClass="AthleteTableViewController" customModule="StretchTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="taZ-Mv-G2m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rR4-xV-ncb">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="bMb-9q-NA8" customClass="AthleteTableViewCell" customModule="StretchTimer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rR4-xV-ncb" id="wur-xK-HCN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bMb-9q-NA8" id="N73-qS-tn2">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MWi-Bi-iJN">
+                                            <rect key="frame" x="15" y="5" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="g1W-2Z-Qp3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fX9-HQ-DyU">
+                                            <rect key="frame" x="92" y="14" width="268" height="42.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Athlete Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72K-4i-xy4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="268" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Graduation Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcM-TJ-nst">
+                                                    <rect key="frame" x="0.0" y="24" width="268" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MWi-Bi-iJN" firstAttribute="leading" secondItem="N73-qS-tn2" secondAttribute="leading" constant="15" id="1Qy-YU-i8j"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fX9-HQ-DyU" secondAttribute="trailing" constant="15" id="9pH-xS-274"/>
+                                        <constraint firstItem="fX9-HQ-DyU" firstAttribute="leading" secondItem="MWi-Bi-iJN" secondAttribute="trailingMargin" constant="25" id="LOG-Ex-ra8"/>
+                                        <constraint firstItem="MWi-Bi-iJN" firstAttribute="top" secondItem="N73-qS-tn2" secondAttribute="top" constant="5" id="ZPU-Ig-4b7"/>
+                                        <constraint firstAttribute="bottom" secondItem="MWi-Bi-iJN" secondAttribute="bottom" constant="5" id="atL-xK-uHO"/>
+                                        <constraint firstItem="fX9-HQ-DyU" firstAttribute="centerY" secondItem="N73-qS-tn2" secondAttribute="centerY" id="xwQ-EK-bao"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="athleteGraduationYearLabel" destination="NcM-TJ-nst" id="YfF-Dk-SyR"/>
+                                    <outlet property="athleteImageView" destination="MWi-Bi-iJN" id="r7o-lN-UCo"/>
+                                    <outlet property="athleteNameLabel" destination="72K-4i-xy4" id="9Pv-BB-b7V"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Trb-8u-Y3U" id="15U-o1-yWg"/>
                             <outlet property="delegate" destination="Trb-8u-Y3U" id="P9O-zL-LwP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="6sF-sl-cFZ"/>
+                    <navigationItem key="navigationItem" title="Athletes" id="6sF-sl-cFZ">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="E4M-nM-xZC">
+                            <color key="tintColor" red="0.54843485359999999" green="0.81606054309999998" blue="0.48621606830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="inviteAthletesButton:" destination="Trb-8u-Y3U" id="oVF-Ct-KsC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Xa3-8e-iPt" kind="show" identifier="inviteAthletesSegue" id="nyn-W6-zm3"/>
+                    </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZr-m8-8WN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="2867"/>
+            <point key="canvasLocation" x="1457.9710144927537" y="2866.7410714285711"/>
+        </scene>
+        <!--Invite Athletes-->
+        <scene sceneID="ues-N2-dln">
+            <objects>
+                <viewController id="Xa3-8e-iPt" customClass="InviteAthletesViewController" customModule="StretchTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="els-YC-N2j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FRY-oq-Y7n">
+                                <rect key="frame" x="40" y="423" width="334" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw4-K5-5DL">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <color key="backgroundColor" red="0.60587535189999997" green="0.80412203680000005" blue="0.51907614290000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Jdn-u2-FaV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="14"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="Xa3-8e-iPt" eventType="touchUpInside" id="jol-eG-PMt"/>
+                                            <action selector="loginButton:" destination="dgI-2G-Ujn" eventType="touchUpInside" id="XCS-bH-wyt"/>
+                                            <action selector="purchaseSubscriptionButton:" destination="QuQ-0P-fgs" eventType="touchUpInside" id="VbT-yW-cb8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TS8-YC-QOl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FRY-oq-Y7n" firstAttribute="centerY" secondItem="els-YC-N2j" secondAttribute="centerY" id="YtH-ZP-shL"/>
+                            <constraint firstItem="FRY-oq-Y7n" firstAttribute="leading" secondItem="TS8-YC-QOl" secondAttribute="leading" constant="40" id="fRk-8j-VFx"/>
+                            <constraint firstItem="TS8-YC-QOl" firstAttribute="trailing" secondItem="FRY-oq-Y7n" secondAttribute="trailing" constant="40" id="hnj-8g-dgQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Invite Athletes" id="RWn-oW-mB7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2b-9t-8UF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3059" y="2867"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Umv-VB-HY2">
@@ -776,7 +874,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kn-Oz-lkR">
-                                <rect key="frame" x="182.5" y="400.5" width="49" height="52.5"/>
+                                <rect key="frame" x="182.5" y="400.5" width="49.5" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -798,7 +896,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ctm-ed-BCL">
-                                <rect key="frame" x="188.5" y="730.5" width="37" height="31"/>
+                                <rect key="frame" x="188.5" y="730.5" width="37.5" height="31"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                             </imageView>
@@ -822,18 +920,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Bth-Ex-00u">
-                                <rect key="frame" x="60.5" y="102.5" width="293" height="283.5"/>
+                                <rect key="frame" x="60.5" y="102.5" width="293.5" height="283.5"/>
                                 <color key="tintColor" red="0.60587535189999997" green="0.80412203680000005" blue="0.51907614290000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="250"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2B-Kw-S6M">
-                                <rect key="frame" x="157.5" y="800.5" width="99" height="61.5"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
-                                <state key="normal" title="I'm a coach!"/>
-                                <connections>
-                                    <action selector="coachSetupButton:" destination="Luy-1i-4XF" eventType="touchUpInside" id="pAL-ot-6Ah"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="eVe-JR-f8I">
+                                <rect key="frame" x="97" y="800.5" width="220" height="61.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2B-Kw-S6M">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="61.5"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                        <state key="normal" title="I'm a coach!"/>
+                                        <connections>
+                                            <action selector="coachSetupButton:" destination="Luy-1i-4XF" eventType="touchUpInside" id="pAL-ot-6Ah"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jni-gR-aui">
+                                        <rect key="frame" x="134" y="0.0" width="86" height="61.5"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                        <state key="normal" title="Scan Code"/>
+                                        <connections>
+                                            <action selector="scanCodeButtonPressed:" destination="Luy-1i-4XF" eventType="touchUpInside" id="lCw-TM-s52"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n1d-QW-cKd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -844,20 +955,20 @@
                             <constraint firstItem="KOQ-c7-eA0" firstAttribute="top" secondItem="NhR-Tw-6ak" secondAttribute="bottom" constant="15" id="4ZD-u1-RwT"/>
                             <constraint firstItem="YkB-Pa-KAN" firstAttribute="top" secondItem="KOQ-c7-eA0" secondAttribute="bottom" constant="30" id="6wk-in-ERW"/>
                             <constraint firstItem="8Kn-Oz-lkR" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="B6j-1E-v47"/>
-                            <constraint firstItem="s2B-Kw-S6M" firstAttribute="top" secondItem="YkB-Pa-KAN" secondAttribute="bottom" constant="15" id="Dfs-jv-3fu"/>
                             <constraint firstItem="YkB-Pa-KAN" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="Fzy-eL-YNn"/>
                             <constraint firstItem="NhR-Tw-6ak" firstAttribute="top" secondItem="qQ0-PC-EGb" secondAttribute="bottom" constant="30" id="GYP-kZ-SmE"/>
                             <constraint firstItem="KOQ-c7-eA0" firstAttribute="leading" secondItem="n1d-QW-cKd" secondAttribute="leading" constant="40" id="N1S-Lk-KYN"/>
                             <constraint firstItem="NhR-Tw-6ak" firstAttribute="leading" secondItem="n1d-QW-cKd" secondAttribute="leading" constant="40" id="Oe6-wN-f8n"/>
-                            <constraint firstItem="n1d-QW-cKd" firstAttribute="bottom" secondItem="s2B-Kw-S6M" secondAttribute="bottom" id="Q1X-fH-qPe"/>
                             <constraint firstItem="n1d-QW-cKd" firstAttribute="trailing" secondItem="KOQ-c7-eA0" secondAttribute="trailing" constant="40" id="YWn-H7-kkZ"/>
                             <constraint firstAttribute="trailing" secondItem="qQ0-PC-EGb" secondAttribute="trailing" constant="25" id="Zwk-eU-zaE"/>
                             <constraint firstItem="wDa-wP-qFc" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="dY2-bu-Ruy"/>
+                            <constraint firstItem="eVe-JR-f8I" firstAttribute="top" secondItem="YkB-Pa-KAN" secondAttribute="bottom" constant="15" id="eGE-1U-iN1"/>
                             <constraint firstItem="wDa-wP-qFc" firstAttribute="centerY" secondItem="Bth-Ex-00u" secondAttribute="centerY" id="fQv-Nt-d2C"/>
                             <constraint firstItem="8Kn-Oz-lkR" firstAttribute="top" secondItem="Bth-Ex-00u" secondAttribute="bottom" constant="8" symbolic="YES" id="h3M-eW-dly"/>
                             <constraint firstItem="ctm-ed-BCL" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="knx-5B-Edh"/>
-                            <constraint firstItem="s2B-Kw-S6M" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="mR3-og-wgQ"/>
+                            <constraint firstItem="eVe-JR-f8I" firstAttribute="centerX" secondItem="0L3-3n-CH8" secondAttribute="centerX" id="od3-wf-lq7"/>
                             <constraint firstItem="ctm-ed-BCL" firstAttribute="centerY" secondItem="YkB-Pa-KAN" secondAttribute="centerY" id="rhK-gZ-bcn"/>
+                            <constraint firstItem="n1d-QW-cKd" firstAttribute="bottom" secondItem="eVe-JR-f8I" secondAttribute="bottom" id="sYj-ZW-Mx3"/>
                             <constraint firstItem="Bth-Ex-00u" firstAttribute="top" secondItem="n1d-QW-cKd" secondAttribute="top" priority="250" constant="50" id="uUo-If-AzS"/>
                             <constraint firstItem="n1d-QW-cKd" firstAttribute="trailing" secondItem="NhR-Tw-6ak" secondAttribute="trailing" constant="40" id="wYF-tE-36L"/>
                         </constraints>
@@ -1058,6 +1169,7 @@
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

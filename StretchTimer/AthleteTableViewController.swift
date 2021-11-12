@@ -6,8 +6,30 @@
 //
 
 import UIKit
+import Alamofire
+
+class AthleteTableViewCell: UITableViewCell {
+    
+    //MARK: Properties
+    @IBOutlet weak var athleteImageView: UIImageView!
+    @IBOutlet weak var athleteNameLabel: UILabel!
+    @IBOutlet weak var athleteGraduationYearLabel: UILabel!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        athleteImageView.layer.masksToBounds = true
+        athleteImageView.layer.cornerRadius = athleteImageView.bounds.width / 2
+    }
+    
+    
+}
 
 class AthleteTableViewController: UITableViewController {
+    
+    //MARK: Properties
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +96,11 @@ class AthleteTableViewController: UITableViewController {
         return true
     }
     */
+    
+    @IBAction func inviteAthletesButton(_ sender: Any) {
+        performSegue(withIdentifier: "inviteAthletesSegue", sender: self)
+    }
+    
 
     /*
     // MARK: - Navigation

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CA0D6F02273E059C003840E6 /* PurchaseCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D6F01273E059B003840E6 /* PurchaseCompleteViewController.swift */; };
-		CA0D6F04273E06E5003840E6 /* AthletesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D6F03273E06E5003840E6 /* AthletesTableViewController.swift */; };
 		CA0D6F06273E094F003840E6 /* MeetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D6F05273E094F003840E6 /* MeetsTableViewController.swift */; };
 		CA0D6F08273E096B003840E6 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D6F07273E096B003840E6 /* WorkoutsTableViewController.swift */; };
 		CA446EEF25F84C8000474AB6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA446EEE25F84C8000474AB6 /* CloudKit.framework */; };
@@ -39,11 +38,11 @@
 		CA7F63F725FDBCC2005F9E95 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7F63F625FDBCC2005F9E95 /* StoreKit.framework */; };
 		CA7F63F925FE8676005F9E95 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F63F825FE8676005F9E95 /* CheckInViewController.swift */; };
 		CA9463D3271F531C00D9FFFD /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9463D2271F531C00D9FFFD /* IAPHelper.swift */; };
+		CAC81924273EC6AC00B07962 /* InviteAthletesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC81923273EC6AC00B07962 /* InviteAthletesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA0D6F01273E059B003840E6 /* PurchaseCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCompleteViewController.swift; sourceTree = "<group>"; };
-		CA0D6F03273E06E5003840E6 /* AthletesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesTableViewController.swift; sourceTree = "<group>"; };
 		CA0D6F05273E094F003840E6 /* MeetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetsTableViewController.swift; sourceTree = "<group>"; };
 		CA0D6F07273E096B003840E6 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewController.swift; sourceTree = "<group>"; };
 		CA446EEC25F84C6600474AB6 /* StretchTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StretchTimer.entitlements; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		CA7F63F625FDBCC2005F9E95 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CA7F63F825FE8676005F9E95 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		CA9463D2271F531C00D9FFFD /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		CAC81923273EC6AC00B07962 /* InviteAthletesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteAthletesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,11 +138,11 @@
 				CA588B5225F6ED570016227E /* Main.storyboard */,
 				CA6CC39E26964D2B003A9758 /* PurchaseSubscriptionViewController.swift */,
 				CA0D6F01273E059B003840E6 /* PurchaseCompleteViewController.swift */,
-				CA0D6F03273E06E5003840E6 /* AthletesTableViewController.swift */,
 				CA0D6F05273E094F003840E6 /* MeetsTableViewController.swift */,
 				CA0D6F07273E096B003840E6 /* WorkoutsTableViewController.swift */,
 				CA6CC39C26964AD3003A9758 /* CoachOnboardingViewController.swift */,
 				CA6CC39A26962F66003A9758 /* AthleteTableViewController.swift */,
+				CAC81923273EC6AC00B07962 /* InviteAthletesViewController.swift */,
 				CA7F63F825FE8676005F9E95 /* CheckInViewController.swift */,
 				CA5A1D3D25F90505009F4A41 /* HomeViewController.swift */,
 				CA446EF325F87A9800474AB6 /* InitialViewController.swift */,
@@ -255,7 +255,7 @@
 				CA588B4F25F6ED570016227E /* SceneDelegate.swift in Sources */,
 				CA446EF425F87A9800474AB6 /* InitialViewController.swift in Sources */,
 				CA5A1D3E25F90505009F4A41 /* HomeViewController.swift in Sources */,
-				CA0D6F04273E06E5003840E6 /* AthletesTableViewController.swift in Sources */,
+				CAC81924273EC6AC00B07962 /* InviteAthletesViewController.swift in Sources */,
 				CA0D6F06273E094F003840E6 /* MeetsTableViewController.swift in Sources */,
 				CA7F63F925FE8676005F9E95 /* CheckInViewController.swift in Sources */,
 			);

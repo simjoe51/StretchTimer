@@ -111,6 +111,14 @@ class OnboardingViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "coachSetupSegue", sender: self)
     }
     
+    //MARK: Intent
+    /*
+     This button turns the green circle above into a camera view. Athlete can scan coach's QR code
+     */
+    @IBAction func scanCodeButtonPressed(_ sender: Any) {
+    }
+    
+    
     
     /*
     // MARK: - Navigation
