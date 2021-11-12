@@ -19,10 +19,6 @@ class PurchaseSubscriptionViewController: UIViewController, UITextFieldDelegate 
     
     //MARK: Variables
     var products: [SKProduct] = []
-    //MARK: IAP
-    //Below moved into IAPHelper.swift
-    //public static let purchaseID = "com.simeone.StretchTimer.basicCoachingMonthly"
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +48,12 @@ class PurchaseSubscriptionViewController: UIViewController, UITextFieldDelegate 
     //MARK: Attempt Purchase
     //Attempt to purchase subscription. If this is successful, use Alamofire to send the signup details to server
     @IBAction func purchaseSubscriptionButton(_ sender: UIButton) {
+        //Fetch previously purchased products before attempting to purchase new ones.
+        TeamSetProducts.store.restorePurchases()
+        
+        //Make the spinny thing
+        let child = SpinnerViewController()
+
         TeamSetProducts.store.requestProducts { [weak self] success, products in
             guard let self = self else { return }
             if success {
@@ -63,17 +65,28 @@ class PurchaseSubscriptionViewController: UIViewController, UITextFieldDelegate 
                     DispatchQueue.main.async {
                         let ac = UIAlertController(title: "You've already purchased this!", message: "Paying me twice would be appreciated, but I think you just want to log in...", preferredStyle: .alert)
                         ac.addAction(UIAlertAction(title: "Ok", style: .default))
-                        self.present(ac, animated: true)
+                        self.present(ac, animated: true) {
+                            self.navigationController?.popToRootViewController(animated: true)
+                        }
                     }
                 } else {
                     //Proceed with buying the product
                     TeamSetProducts.store.buyProduct(firstProduct)
+                    //Activate the spinny thing
+                    self.addChild(child)
+                    child.view.frame = self.view.frame
+                    self.view.addSubview(child.view)
+                    child.didMove(toParent: self)
+                    
                 }
                 //MARK: Note
                 //After the above line is run, start an activity indicator with a timer that will send the user a timeout warning after a certain time if the success notification doesnt' come back.
             } else {
                 //MARK: ADD ERROR HANDLING
                 print("Failed to request products. This needs proper error handling later")
+                let ac = UIAlertController(title: "Hmmm...", message: "Something went wrong finding subscriptions. Please check back later, this isn't your fault!!", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Ok", style: .default))
+                self.present(ac, animated: true)
             }
         }
     }
@@ -117,4 +130,20 @@ class PurchaseSubscriptionViewController: UIViewController, UITextFieldDelegate 
     }
     */
 
+}
+
+class SpinnerViewController: UIViewController {
+    var spinner = UIActivityIndicatorView(style: .large)
+    
+    override func loadView() {
+        view = UIView()
+        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        spinner.startAnimating()
+        view.addSubview(spinner)
+        
+        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
 }

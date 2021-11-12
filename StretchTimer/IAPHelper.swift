@@ -65,7 +65,7 @@ extension IAPHelper {
         return SKPaymentQueue.canMakePayments()
     }
     
-    //MARK: MAKE SURE TO IMPLEMENT THIS TO AVOID REJECTION. ADD BUTTON IN CREATE ACCOUNT VIEW. NOT SURE IF THIS IS NECESSARY AS THE SUBSCRIPTION RECURS!!
+    //MARK: MAKE SURE TO IMPLEMENT THIS IN A BUTTON TO AVOID REJECTION. ADD BUTTON IN CREATE ACCOUNT VIEW. NOT SURE IF THIS IS NECESSARY AS THE SUBSCRIPTION RECURS!! Can this be a check that happens when the user tries to make a purchase?
     public func restorePurchases() {
         SKPaymentQueue.default().restoreCompletedTransactions()
     }

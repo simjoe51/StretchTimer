@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA0D6F02273E059C003840E6 /* PurchaseCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D6F01273E059B003840E6 /* PurchaseCompleteViewController.swift */; };
+		CA0D6F04273E06E5003840E6 /* AthletesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D6F03273E06E5003840E6 /* AthletesTableViewController.swift */; };
+		CA0D6F06273E094F003840E6 /* MeetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D6F05273E094F003840E6 /* MeetsTableViewController.swift */; };
+		CA0D6F08273E096B003840E6 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D6F07273E096B003840E6 /* WorkoutsTableViewController.swift */; };
 		CA446EEF25F84C8000474AB6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA446EEE25F84C8000474AB6 /* CloudKit.framework */; };
 		CA446EF225F8686200474AB6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CA446EF125F8686200474AB6 /* Alamofire */; };
 		CA446EF425F87A9800474AB6 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA446EF325F87A9800474AB6 /* InitialViewController.swift */; };
@@ -38,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA0D6F01273E059B003840E6 /* PurchaseCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCompleteViewController.swift; sourceTree = "<group>"; };
+		CA0D6F03273E06E5003840E6 /* AthletesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesTableViewController.swift; sourceTree = "<group>"; };
+		CA0D6F05273E094F003840E6 /* MeetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetsTableViewController.swift; sourceTree = "<group>"; };
+		CA0D6F07273E096B003840E6 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewController.swift; sourceTree = "<group>"; };
 		CA446EEC25F84C6600474AB6 /* StretchTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StretchTimer.entitlements; sourceTree = "<group>"; };
 		CA446EEE25F84C8000474AB6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CA446EF325F87A9800474AB6 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +137,10 @@
 				CA588B5025F6ED570016227E /* ViewController.swift */,
 				CA588B5225F6ED570016227E /* Main.storyboard */,
 				CA6CC39E26964D2B003A9758 /* PurchaseSubscriptionViewController.swift */,
+				CA0D6F01273E059B003840E6 /* PurchaseCompleteViewController.swift */,
+				CA0D6F03273E06E5003840E6 /* AthletesTableViewController.swift */,
+				CA0D6F05273E094F003840E6 /* MeetsTableViewController.swift */,
+				CA0D6F07273E096B003840E6 /* WorkoutsTableViewController.swift */,
 				CA6CC39C26964AD3003A9758 /* CoachOnboardingViewController.swift */,
 				CA6CC39A26962F66003A9758 /* AthleteTableViewController.swift */,
 				CA7F63F825FE8676005F9E95 /* CheckInViewController.swift */,
@@ -232,15 +244,19 @@
 				CA588B5125F6ED570016227E /* ViewController.swift in Sources */,
 				CA9463D3271F531C00D9FFFD /* IAPHelper.swift in Sources */,
 				CA446EF825F9B89E00474AB6 /* OnboardingViewController.swift in Sources */,
+				CA0D6F08273E096B003840E6 /* WorkoutsTableViewController.swift in Sources */,
 				CA6CC39F26964D2B003A9758 /* PurchaseSubscriptionViewController.swift in Sources */,
 				CA6CC39D26964AD3003A9758 /* CoachOnboardingViewController.swift in Sources */,
 				CA6CC39B26962F66003A9758 /* AthleteTableViewController.swift in Sources */,
+				CA0D6F02273E059C003840E6 /* PurchaseCompleteViewController.swift in Sources */,
 				CA6CC3C52698F0E2003A9758 /* TeamSet.xcdatamodeld in Sources */,
 				CA6CC3C72699334F003A9758 /* CoreDataManager.swift in Sources */,
 				CA588B4D25F6ED570016227E /* AppDelegate.swift in Sources */,
 				CA588B4F25F6ED570016227E /* SceneDelegate.swift in Sources */,
 				CA446EF425F87A9800474AB6 /* InitialViewController.swift in Sources */,
 				CA5A1D3E25F90505009F4A41 /* HomeViewController.swift in Sources */,
+				CA0D6F04273E06E5003840E6 /* AthletesTableViewController.swift in Sources */,
+				CA0D6F06273E094F003840E6 /* MeetsTableViewController.swift in Sources */,
 				CA7F63F925FE8676005F9E95 /* CheckInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
