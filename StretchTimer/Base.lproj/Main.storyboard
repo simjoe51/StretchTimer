@@ -673,39 +673,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FRY-oq-Y7n">
-                                <rect key="frame" x="40" y="423" width="334" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw4-K5-5DL">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
-                                        <color key="backgroundColor" red="0.60587535189999997" green="0.80412203680000005" blue="0.51907614290000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Jdn-u2-FaV"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="14"/>
-                                        <state key="normal" title="Done">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="doneButtonPressed:" destination="Xa3-8e-iPt" eventType="touchUpInside" id="jol-eG-PMt"/>
-                                            <action selector="loginButton:" destination="dgI-2G-Ujn" eventType="touchUpInside" id="XCS-bH-wyt"/>
-                                            <action selector="purchaseSubscriptionButton:" destination="QuQ-0P-fgs" eventType="touchUpInside" id="VbT-yW-cb8"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw4-K5-5DL">
+                                <rect key="frame" x="40" y="626" width="334" height="50"/>
+                                <color key="backgroundColor" red="0.60587535189999997" green="0.80412203680000005" blue="0.51907614290000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jdn-u2-FaV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="14"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="Xa3-8e-iPt" eventType="touchUpInside" id="jol-eG-PMt"/>
+                                    <action selector="loginButton:" destination="dgI-2G-Ujn" eventType="touchUpInside" id="XCS-bH-wyt"/>
+                                    <action selector="purchaseSubscriptionButton:" destination="QuQ-0P-fgs" eventType="touchUpInside" id="VbT-yW-cb8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-x7-Xw4">
+                                <rect key="frame" x="60" y="197" width="294" height="128"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TS8-YC-QOl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FRY-oq-Y7n" firstAttribute="centerY" secondItem="els-YC-N2j" secondAttribute="centerY" id="YtH-ZP-shL"/>
-                            <constraint firstItem="FRY-oq-Y7n" firstAttribute="leading" secondItem="TS8-YC-QOl" secondAttribute="leading" constant="40" id="fRk-8j-VFx"/>
-                            <constraint firstItem="TS8-YC-QOl" firstAttribute="trailing" secondItem="FRY-oq-Y7n" secondAttribute="trailing" constant="40" id="hnj-8g-dgQ"/>
+                            <constraint firstItem="C8q-x7-Xw4" firstAttribute="leading" secondItem="TS8-YC-QOl" secondAttribute="leading" constant="60" id="L6o-k2-ovE"/>
+                            <constraint firstItem="TS8-YC-QOl" firstAttribute="trailing" secondItem="C8q-x7-Xw4" secondAttribute="trailing" constant="60" id="m1T-Kr-5Eu"/>
+                            <constraint firstItem="C8q-x7-Xw4" firstAttribute="centerY" secondItem="els-YC-N2j" secondAttribute="centerY" id="ws6-jZ-Dv6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Invite Athletes" id="RWn-oW-mB7"/>

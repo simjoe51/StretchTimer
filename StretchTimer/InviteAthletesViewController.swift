@@ -20,6 +20,20 @@ class InviteAthletesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func generateQRCode(from string: String) -> UIImage? {
+        let data = string.data(using: String.Encoding.ascii)
+        
+        if let filter = CIFilter(name: "CIQRCodeGenerator") {
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX: 3, y: 3)
+            
+            if let output = filter.outputImage?.transformed(by: transform) {
+                return UIImage(ciImage: output)
+            }
+        }
+        return nil
+    }
+    
     //Pop user back to Athletes table after they're done inviting new athletes.
     @IBAction func doneButtonPressed(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)

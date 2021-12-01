@@ -8,6 +8,11 @@
 import UIKit
 import Alamofire
 
+struct Athlete {
+    let name: String
+    let gradYear
+}
+
 class AthleteTableViewCell: UITableViewCell {
     
     //MARK: Properties
